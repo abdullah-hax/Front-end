@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: cadetblue;
+            padding: 20px 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap:wrap ; 
+             
+
+            /* display:flex >3ta card কে পাশাপাশি রাখবে,,<br> দিলেও পাশাপাশি থাকবে
+            display:grid >3ta card কে উপর-নিচ রাখবে */
+        }
+        .parent-card1{
+            width: 300px;
+            box-shadow: 3px 3px 4px black;
+            margin:10px;
+            box-sizing: border-box;
+            background-color: white;      
+            float: left;
+           
+        }
+        img{
+            width: 100%;
+        }
+        .child-card1{
+             text-align: justify;
+             padding:10px;
+             background-color: indigo;
+             color: white;
+        }
+        h2{
+            text-align: center;
+        }
+        
+        .child-card2{
+             text-align: justify;
+             padding:10px;
+            
+        }
+        .parent-card2{
+            width: 300px;
+            box-shadow: 2px 2px 4px black;    /* 3 3 dile sundor hoina */
+            margin:10px;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .div-clear{
+            clear: both;
+        }
+        .parent-card1:hover, .parent-card2:hover{
+            box-shadow:3px 3px 8px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parent-card1">
+            <img src="---source/1_fHrAZJ1_L0Ff9dvVexL5_A.png" alt="This image is not found">
+            <div class="child-card1">
+                <h2>Web Devlopment</h2>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ab recusandae corrupti, ex praesentium alias dolore. Laboriosam omnis, dicta laborum, nam tenetur repudiandae perferendis deleniti molestias sit quae eius dolor.</div>
+            </div>
+        </div>
+
+        <div class="parent-card2">
+            <img src="---source/1_fHrAZJ1_L0Ff9dvVexL5_A.png" alt="This image is not found">
+            <div class="child-card2">
+                <h2>Web Devlopment</h2>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ab recusandae corrupti, ex praesentium alias dolore. Laboriosam omnis, dicta laborum, nam tenetur repudiandae perferendis deleniti molestias sit quae eius dolor.</div>
+            </div>
+        </div>
+
+        <div class="parent-card2">
+            <img src="---source/1_fHrAZJ1_L0Ff9dvVexL5_A.png" alt="This image is not found">
+            <div class="child-card2">
+                <h2>Web Devlopment</h2>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ab recusandae corrupti, ex praesentium alias dolore. Laboriosam omnis, dicta laborum, nam tenetur repudiandae perferendis deleniti molestias sit quae eius dolor.</div>
+            </div>
+        </div>
+
+        <div class="div-clear"></div>
+    </div>
+</body>
+</html>
+
+
+

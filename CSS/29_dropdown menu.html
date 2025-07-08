@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: cadetblue;
+        text-align: center;
+        padding: 1% 7%;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+    .item{
+        display: inline;
+        position: relative;
+    }
+    .dropdown-content{
+        position: absolute;
+        top: 30px;
+        right: 0px;
+        text-align: left;
+        background-color: cadetblue;
+        visibility: hidden;
+    }
+    .dropdown-content a{
+         display: block;    /* block korei ektar nice arekta k namate hocce,, <br> die namale bgc te problem hocce */
+    }
+    .item:hover .dropdown-content{
+        visibility: visible;
+    }
+    .dropdown-content a:hover{
+        background-color: grey;
+    }
+</style>
+<body>
+    <div class="container">
+        <a href="#">Home</a>
+        <a href="#">Tutorial</a>
+        <div class="item">
+            <a href="#">Contact me</a>
+            <div class="dropdown-content">
+                <a href="#">Facebook</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
+        <a href="#">About me</a>
+    </div>
+</body>
+</html>

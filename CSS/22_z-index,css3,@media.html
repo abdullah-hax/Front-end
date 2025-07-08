@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary:black;
+            --secondery:green;
+        }
+        div{
+            height: 250px;
+            width:250px;
+        }
+        .div1{
+            background-color:#000;
+            background-color: var(--primary,cadetblue);
+            position:absolute ;
+            z-index:10;
+        }
+        .div2{
+            background-color:green;
+            background-color: var(--secondery,blue);
+            position:absolute;
+            top:150px;
+            left:150px;
+          /* z-index er deafualt value 0, -ve value o deya jabe */
+        }
+
+        @media screen and (max-width:700px){
+            :root{
+                --primary:green;
+                --secondery:black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+</html>
+
+<!-- internet explorer e css 3 kaj krena tai aladavabe background-color dite hbe -->

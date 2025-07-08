@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+    .child1{grid-area:header ;}
+    .child2{grid-area:menu;}                        
+    .child3{grid-area:main;}
+    .child4{grid-area:aside;}
+    .child5{grid-area:footer;}
+
+    .container{
+        display:grid;
+        grid-template-areas:
+        'header header header header header header'
+        'menu main main main aside aside'
+        'menu footer footer footer footer footer'
+        ;
+        
+    }
+
+  /* --------or-------
+    .container{
+        display:grid;
+        grid-template-columns: auto auto auto auto auto auto ;
+    }
+   
+    .child1{
+        grid-column:1/7;
+    }
+    .child2{
+        grid-column:;
+        grid-row:2/4;
+    }
+    .child3{
+        grid-column:2/5;
+    }
+    .child4{
+        grid-column:5/7;
+    }
+    .child5{
+        grid-column:2/7;
+    } 
+    --------------------*/
+    
+    .container div{
+        background-color: cadetblue;
+        border: 1px solid;
+        text-align: center;
+    }
+  
+</style>
+<body>
+    <div class="container">
+        <div class="child1"><h1>Header</h1></div>
+        <div class="child2"><h1>Menu</h1></div>
+        <div class="child3"><h1>Main</h1></div>
+        <div class="child4"><h1>Aside</h1></div>
+        <div class="child5"><h1>Footer</h1></div>
+    </div>
+    
+</body>
+</html>

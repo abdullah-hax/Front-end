@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+        }
+      
+        .parent{
+            width: 70%;
+            height:80vh; background-color: #e94560;
+        }
+        .child{
+            background-color: #16213e;
+            width: 200px;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            padding: 70px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow:0 8px 25px  #16213e;
+        }
+        
+        .grand-parent{
+
+            display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+        .parent{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+        }
+    </style>
+</head>
+<body>
+   <div class="grand-parent">
+    <div class="parent">
+        <div class="child">Center Div</div>
+     </div> 
+   </div>
+</body>
+</html>

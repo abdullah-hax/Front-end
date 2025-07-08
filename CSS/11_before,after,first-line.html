@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        
+        p::before, p::after {
+            content:'';
+            display:block;     /* inline-block dile width dite hbe  */
+            background-color: aqua;
+            height: 30px;
+        }
+        p::first-line{
+            color: green;
+            font-size: 30px;
+        }
+        
+           /* block dile first-line kaj krbena karon block nijei first-line
+            inline-block er width 100% dileo same */
+     /* ::before dile first-letter kaj krbena karon ::before er content nijei first letter. */
+
+        div::before, div::after{
+            content:'%';
+            font-size:30px ;
+            color: blue;
+            background-color: aqua;
+        }
+        div::first-line{
+            color: green;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi porro officia harum temporibus repudiandae laborum ipsam deleniti excepturi incidunt placeat, numquam fugiat eaque dignissimos debitis sed dolorum tempora, soluta, aliquid et consequuntur nemo optio perferendis corrupti sit? Temporibus sit quidem suscipit ratione quasi, deleniti illum aperiam nostrum incidunt nisi veniam saepe exercitationem nulla cumque earum neque. Ipsa beatae corporis unde veniam possimus repellendus blanditiis enim consectetur perspiciatis, id saepe autem non soluta est quis dignissimos necessitatibus, nobis asperiores quidem libero laboriosam. Repellat assumenda debitis vero saepe odio, nam optio ratione fugit quos. Cum, voluptate nesciunt obcaecati quidem suscipit ut quibusdam.</p> <br><br><br>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla temporibus aspernatur suscipit accusantium fuga. Perferendis impedit fuga ullam unde culpa alias itaque, quae dolorem libero rem ad perspiciatis. Sunt quidem pariatur architecto omnis voluptatum ex enim. Nesciunt ducimus explicabo et possimus quas laborum nobis quis ipsum qui ab! Eos, doloribus!</div>
+</body>
+</html>

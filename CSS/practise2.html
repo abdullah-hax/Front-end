@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: cadetblue;
+        text-align: center;
+        padding:1% 7%;
+    }
+    a{
+        color: wheat;
+        text-decoration:none;
+        padding:10px 20px;
+        font-size: 1.2rem;
+    }
+    .item{
+        display: inline;
+        position: relative;
+    }
+    .dropdown-content a{
+        display: block;
+       
+    }
+    .dropdown-content{
+        position: absolute;
+        top: 30px;
+        right: 0;
+        background-color: cadetblue;
+        text-align: left;
+        visibility: hidden;
+    }
+    .item:hover .dropdown-content{
+        visibility: visible;
+    }
+    .dropdown-content a:hover{
+        background-color: grey;
+    }
+</style>
+<body>
+    <div class="container">
+        <a href="#">Home</a>
+        <a href="#">Tutorial</a>
+        <div class="item">
+            <a href="#">Contact me</a>
+            <div class="dropdown-content">
+                <a href="#">Facebook</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
+        <a href="#">About me</a>
+    </div>
+</body>
+</html>
