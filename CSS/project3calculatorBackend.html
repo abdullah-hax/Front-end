@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            transition: .3s;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            margin: 20px 0;
+        }
+
+        /* *{
+            margin: 0;
+            padding: 0;
+            
+        } */
+        .container {
+            box-shadow: 1px 1px 4px rgb(0, 0, 0);
+        }
+
+        input {
+            height: 120px;
+            width: 450px;
+            box-sizing: border-box;
+            font-size: 30px;
+            /* word-spacing: 20px;   eta kaj krtese na */
+            text-align: end;
+            padding-right: 20px;
+        }
+
+        .button {}
+
+        td {
+            border: 2px black solid;
+            padding: 30px;
+            background-color: #1E2224;
+            color: white;
+            font-size: 22px;
+
+        }
+
+        table {
+            border-collapse: collapse;
+            height: 450px;
+            width: 450px;
+            text-align: center;
+
+        }
+
+        tr {
+            display: grid;
+            grid-template-columns: repeat(4, 25%)
+        }
+
+        td:last-child {
+            background-color: #00C1B7;
+        }
+
+        #equal {
+            background-color: yellow;
+            color: black;
+        }
+
+        /* hover start */
+        td:hover {
+            background-color: pink;
+        }
+
+        td:last-child:hover {
+            background-color: #257773;
+        }
+
+        #equal:hover {
+            background-color: rgb(156, 156, 29);
+        }
+
+        .container:hover {
+            box-shadow: 3px 3px 15px black;
+        }
+
+        /* hover end */
+
+        p {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Calculator</p>
+    <div class="container">
+        <input type="text">
+        <div class="button">
+            <table>
+                <tr>
+                    <td>c</td>
+                    <td>+/-</td>
+                    <td>%</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>.</td>
+                    <td>DEL</td>
+                    <td id="equal">=</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let input = document.querySelector('input');
+    let buttons = document.querySelectorAll('td');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            let value = e.target.innerText;
+            if (value === 'DEL') {
+                input.value = input.value.slice(0, -1);
+            } else if (value === 'c') {
+                input.value = '';
+            } else if (value === '=') {
+                try {
+                    input.value = eval(input.value.replace('x', '*').replace('%', '/100*'));
+                } catch (error) {
+                    input.value = 'Error';
+                }
+            } else if (value === '+/-') {
+                if (input.value) {
+                    input.value = parseFloat(input.value) * -1;
+                }
+            }
+            else {
+                input.value += value;
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('keydown', (e) => {
+        const key = e.key;
+        const validKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '+', '-', '*', '/', '%'];
+        if (validKeys.includes(key)) {
+            input.value += key;
+        } else if (key === 'Enter') {
+            try {
+                input.value = eval(input.value.replace('x', '*').replace('%', '/100*'));
+            } catch (error) {
+                input.value = 'Error';
+            }
+        } else if (key === 'Backspace') {
+            input.value = input.value.slice(0, -1);
+        } else if (key === 'c' || key === 'C') {
+            input.value = '';
+        }
+    });
+</script>

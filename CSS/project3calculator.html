@@ -1,82 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             transition: .3s;
         }
-        body{
-            display:grid;
-            place-items:center;
-            margin:20px 0;
+
+        body {
+            display: grid;
+            place-items: center;
+            margin: 20px 0;
         }
+
         /* *{
             margin: 0;
             padding: 0;
             
         } */
-        .container{
-            box-shadow:1px 1px 4px rgb(0, 0, 0);
+        .container {
+            box-shadow: 1px 1px 4px rgb(0, 0, 0);
         }
-        input{
-            height:120px;
-            width:450px;
+
+        input {
+            height: 120px;
+            width: 450px;
             box-sizing: border-box;
             font-size: 30px;
             /* word-spacing: 20px;   eta kaj krtese na */
             text-align: end;
             padding-right: 20px;
         }
-        .button{
-           
-        }
-        td{
-            border:2px black solid;
+
+        .button {}
+
+        td {
+            border: 2px black solid;
             padding: 30px;
             background-color: #1E2224;
             color: white;
             font-size: 22px;
-            
+
         }
-        table{
-            border-collapse:collapse;
-            height:450px;
-            width:450px;
+
+        table {
+            border-collapse: collapse;
+            height: 450px;
+            width: 450px;
             text-align: center;
-          
-        } 
-        tr{
+
+        }
+
+        tr {
             display: grid;
-            grid-template-columns:repeat(4,25%)
-            
+            grid-template-columns: repeat(4, 25%)
         }
-        td:last-child{
-              background-color: #00C1B7;  
+
+        td:last-child {
+            background-color: #00C1B7;
         }
-        #equal{
-            background-color:yellow;
+
+        #equal {
+            background-color: yellow;
             color: black;
         }
 
         /* hover start */
-        td:hover{
-           background-color: pink; 
+        td:hover {
+            background-color: pink;
         }
-        td:last-child:hover{
+
+        td:last-child:hover {
             background-color: #257773;
         }
-        #equal:hover{
-             background-color: rgb(156, 156, 29);
+
+        #equal:hover {
+            background-color: rgb(156, 156, 29);
         }
-        .container:hover{
+
+        .container:hover {
             box-shadow: 3px 3px 15px black;
         }
+
         /* hover end */
-        
-        p{
+
+        p {
             font-size: 40px;
             margin-bottom: 20px;
             font-weight: bold;
@@ -84,6 +95,7 @@
     </style>
 
 </head>
+
 <body>
     <p>Calculator</p>
     <div class="container">
@@ -124,4 +136,5 @@
         </div>
     </div>
 </body>
+
 </html>
